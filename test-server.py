@@ -1,0 +1,18 @@
+from flask import Flask, send_file
+import build
+
+app = Flask(__name__, static_url_path = '/unrendered')
+
+## i hate this but its only for testing :/
+@app.route('/<path>')
+def path(path):
+    build.build()
+    return send_file('rendered/' + path)
+
+@app.route('/<path>/<path2>')
+def path2(path, path2):
+    build.build()
+    return send_file('rendered/' + path + '/' + path2)
+
+if __name__ == '__main__':
+    app.run(debug = True, port = 5000)

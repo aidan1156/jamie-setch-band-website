@@ -1,0 +1,13 @@
+
+body {
+    margin: 0;
+}
+
+
+nav {
+    background-image: url('assets/cover.webp');
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    height: 100dvh;
+}
