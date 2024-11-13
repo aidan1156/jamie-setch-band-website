@@ -3,5 +3,20 @@
         "id": "home",
         "name": "Home",
         "show-nav": "full"
+    },
+    {
+        "id": "music",
+        "name": "Music",
+        "show-nav": "half"
+    },
+    {
+        "id": "store",
+        "name": "Store",
+        "show-nav": "half"
+    },
+    {
+        "id": "sign-up",
+        "name": "Sign Up",
+        "show-nav": "none"
     }
 ]

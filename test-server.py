@@ -14,5 +14,10 @@ def path2(path, path2):
     build.build()
     return send_file('rendered/' + path + '/' + path2)
 
+@app.route('/<path>/<path2>/<path3>')
+def path3(path, path2, path3):
+    build.build()
+    return send_file('rendered/' + path + '/' + path2 + '/' + path3)
+
 if __name__ == '__main__':
     app.run(debug = True, port = 5000)

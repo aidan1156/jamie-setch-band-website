@@ -9,9 +9,45 @@
 <body>
     <main>
         <nav>
-            nav
+            <div class="socials">
+                <button class="side-nav-button" onclick="site.toggleSideNav()">
+                    <img src="assets/icons/menu.svg" alt="">
+                </button>
+                <a href="">
+                    <img src="assets/socials/instagram.png" alt="">
+                </a>
+            </div>
+            <div class="spacer"></div>
+            <div class="main-nav">
+                <h1>Jamie Setch</h1>
+                <div class="links">
+                    <a href="/home" data-nav-id="home">Home</a>
+                    <a href="/music" data-nav-id="music">Music</a>
+                    <a href="/store" data-nav-id="store">Store</a>
+                    <a href="/sign-up" data-nav-id="sign-up">Sign Up</a>
+                </div>
+            </div>
         </nav>
         {{MAIN_CONTENT}}
     </main>
+
+
+    <div class="side-nav-close" onclick="site.toggleSideNav()"></div>
+    <div class="side-nav">
+        <a href="/home" data-nav-id="home">Home</a>
+        <a href="/music" data-nav-id="music">Music</a>
+        <a href="/store" data-nav-id="store">Store</a>
+        <a href="/sign-up" data-nav-id="sign-up">Sign Up</a>
+    </div>
+    
+    <svg class="hidden">
+        <filter id="whiteFilter" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/>
+        </filter>
+        <filter id="yellowFilter" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="0 0 0 0 0.98  0 0 0 0 0.90  0 0 0 0 0.11  0 0 0 1 0"/>
+        </filter>
+    </svg>
+    <script type="module" src="javascript/main.js"></script>
 </body>
 </html>

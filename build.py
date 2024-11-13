@@ -32,6 +32,7 @@ def build():
             content = pageContents[key].replace('{{HIDDEN}}', ' hidden ')
             if key == page['id']:
                 content = pageContents[key].replace('{{HIDDEN}}', '')
+            content = content.replace('{{SHOW_NAV}}', page['show-nav'])
             contents += content
         
         contents = template.replace('{{MAIN_CONTENT}}', contents)
