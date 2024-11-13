@@ -11,3 +11,11 @@ function toggleSideNav() {
 window.site = {}
 window.site.navigateTo = navigateTo
 window.site.toggleSideNav = toggleSideNav
+
+
+const els = document.querySelectorAll('.nav-links')
+for (el of els) {
+    el.addEventListener('click', (e) => {
+        
+    })
+}

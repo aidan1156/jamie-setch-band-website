@@ -1,9 +1,18 @@
 
+@font-face { 
+    font-family: albertus; 
+    src: url('assets/albertusmedium_regular.ttf'), local('Arial'), local('system-ui'); 
+    font-style: normal;
+}
+
+
+
 body {
     margin: 0;
     line-height: 1.6;
     font-size: 1.4em;
     color: white;
+    font-family: albertus;
     --primary-clr: hsl(55, 94%, 54%);
     --primary-clr-transparent: hsla(55, 94%, 54%, 0.4);
     --side-nav-width: 10em;
@@ -12,6 +21,8 @@ body {
 body.side-nav-open {
     overflow: hidden;
 }
+
+
 
 
 button {
