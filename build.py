@@ -1,5 +1,30 @@
 import json
 
+
+def get_music_html():
+    base = '''
+        <a style='background:{{BACKGROUND}}; color: {{TEXT_COLOUR}}' href='{{HREF}}'>
+            {{SONG_NAME}}
+        </a>
+    '''
+
+    f = open('items/songs.json')
+    songs = json.load(f)
+    f.close()
+
+    result = ''
+    for song in songs:
+        html = base\
+            .replace('{{BACKGROUND}}', song['background'])\
+            .replace('{{SONG_NAME}}', song['name'])\
+            .replace('{{HREF}}', song['link'])\
+            .replace('{{TEXT_COLOUR}}', song['text-colour'])
+
+        result += html
+    
+    return result
+
+
 def build():
     f = open('pages.json')
     pages = json.load(f)
@@ -9,7 +34,7 @@ def build():
     template = f.read()
     f.close()
 
-    cssFiles = ['nav.css']
+    cssFiles = ['nav.css', 'music.css']
 
     css = ''
     for file in cssFiles:
@@ -19,11 +44,27 @@ def build():
 
     template = template.replace('{{MAIN_CSS}}', f'<style>{css}</style>')
 
+    f = open('items/socials.json')
+    socials = json.load(f)
+    f.close()
+    social_html = ''
+    for social in socials:
+        social_html += f'''
+            <a href="{social['link']}">
+                <img src="{social['icon']}" alt="">
+            </a>
+        '''
+    template = template.replace('{{SOCIALS}}', social_html)
+
     pageContents = {}
 
     for page in pages:
         f = open('unrendered/' + page['id'] + '.html')
-        pageContents[page['id']] = f.read()
+        contents = f.read()
+        if page['id'] == 'music':
+
+            contents = contents.replace('{{MUSIC_LIST}}', get_music_html())
+        pageContents[page['id']] = contents
         f.close()
 
     for page in pages:

@@ -1,0 +1,11 @@
+
+#music > a {
+    display: block;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 3em;
+    text-decoration: none;
+    color: inherit;
+    background-position: center center;
+    text-transform: uppercase;
+}

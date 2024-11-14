@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Betrayal",
+        "link": "google.com",
+        "background": "url(\"assets/songs/betrayal.webp\")",
+        "text-colour": "white"
+    },
+    {
+        "name": "Coming Soon...",
+        "link": "",
+        "background": "#2E2E2E",
+        "text-colour": "white"
+    },
+    {
+        "name": "Coming Later...",
+        "link": "",
+        "background": "white",
+        "text-colour": "black"
+    }
+]

@@ -10,7 +10,7 @@
 body {
     margin: 0;
     line-height: 1.6;
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: white;
     font-family: albertus;
     --primary-clr: hsl(55, 94%, 54%);
@@ -55,6 +55,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
+    text-transform: uppercase;
 }
 
 nav[data-size="top-bar"] {
@@ -169,7 +170,7 @@ nav > .socials > * > img:hover {
 .side-nav-button {
     display: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .side-nav-button {
         display: block;
     }

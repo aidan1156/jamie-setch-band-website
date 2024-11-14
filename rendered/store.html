@@ -16,7 +16,7 @@
 body {
     margin: 0;
     line-height: 1.6;
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: white;
     font-family: albertus;
     --primary-clr: hsl(55, 94%, 54%);
@@ -61,6 +61,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
+    text-transform: uppercase;
 }
 
 nav[data-size="top-bar"] {
@@ -175,7 +176,7 @@ nav > .socials > * > img:hover {
 .side-nav-button {
     display: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .side-nav-button {
         display: block;
     }
@@ -222,6 +223,16 @@ body.side-nav-open .side-nav {
 
 body.side-nav-open .side-nav-close {
     display: block;
+}
+#music > a {
+    display: block;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 3em;
+    text-decoration: none;
+    color: inherit;
+    background-position: center center;
+    text-transform: uppercase;
 }</style>
 </head>
 <body>
@@ -231,9 +242,27 @@ body.side-nav-open .side-nav-close {
                 <button class="side-nav-button" onclick="site.toggleSideNav()">
                     <img src="assets/icons/menu.svg" alt="">
                 </button>
-                <a href="">
-                    <img src="assets/socials/instagram.png" alt="">
-                </a>
+                
+            <a href="www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
             </div>
             <div class="spacer"></div>
             <div class="main-nav">
@@ -248,7 +277,19 @@ body.side-nav-open .side-nav-close {
         </nav>
         <div class=" hidden  page" data-nav="full" id="home">
 </div><div class=" hidden  page" data-nav="top-bar" id="music">
-    music
+    
+        <a style='background:url("assets/songs/betrayal.webp"); color: white' href='google.com'>
+            Betrayal
+        </a>
+    
+        <a style='background:#2E2E2E; color: white' href=''>
+            Coming Soon...
+        </a>
+    
+        <a style='background:white; color: black' href=''>
+            Coming Later...
+        </a>
+    
 </div><div class="  page" data-nav="top-bar" id="store">
     store
 </div><div class=" hidden   page" data-nav="none" id="sign-up">

@@ -9,7 +9,7 @@ function navigateTo(page) {
     next.classList.remove('hidden')
     document.querySelector('nav').dataset.size = next.dataset.nav
     closeSideNav()
-    history.pushState('', "", page);
+    history.pushState('hi', "", page);
 
     let els = document.querySelectorAll('.nav-link.selected')
     for (const el of els) {
@@ -42,3 +42,9 @@ for (const el of els) {
         navigateTo(e.target.dataset.navid)
     })
 }
+
+window.addEventListener('popstate', (e) => {
+    let path = window.location.pathname
+    path = path.slice(1, path.length).split('.')[0]
+    navigateTo(path)
+})
