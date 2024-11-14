@@ -154,8 +154,8 @@ nav > .socials {
     line-height: 1;
 }
 
-nav[data-size="top-bar"] > .socials {
-    padding: 0.5em;
+nav[data-size="top-bar"] > .main-nav {
+    place-self: center;
 }
 
 nav > .socials > * > img {
@@ -170,6 +170,7 @@ nav > .socials > * > img:hover {
 .side-nav-button {
     display: none;
 }
+
 @media (max-width: 800px) {
     .side-nav-button {
         display: block;
