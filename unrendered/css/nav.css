@@ -183,6 +183,10 @@ nav > .socials > * > img:hover {
     nav > .main-nav > .links {
         display: none;
     }
+
+    nav > .socials {
+        font-size: 1.2em;
+    }
     body {
         font-size: 0.9rem;
     }
@@ -233,6 +237,10 @@ body.side-nav-open .side-nav-close {
 .side-nav-socials {
     padding: 0.5em 1.5em;
     margin-top: 0.5em;
+}
+
+.side-nav-socials > a {
+    text-decoration: none;
 }
 
 .side-nav-socials > a > img {
