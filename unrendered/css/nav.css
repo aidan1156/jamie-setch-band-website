@@ -184,9 +184,11 @@ nav > .socials > * > img:hover {
     nav > .main-nav > .links {
         display: none;
     }
-
     nav > .socials {
-        font-size: 1.2em;
+        font-size: 1.3em;
+    }
+    nav > .socials > a {
+        display: none;
     }
     body {
         font-size: 0.9rem;
