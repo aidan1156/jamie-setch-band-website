@@ -108,12 +108,13 @@ nav > .main-nav > .links > a {
     position: relative;
     padding: 0.5rem;
     font-size: 0.9em;
+    transition: var(--hover-speed) color;
     --hover-speed: 0.5s;
 }
 
-nav > .main-nav > .links > a:hover {
+nav > .main-nav > .links > a:hover,
+nav > .main-nav > .links > a.selected {
     color: var(--primary-clr);
-    transition: var(--hover-speed) color;
 }
 
 nav > .main-nav > .links > a::before,

@@ -20,6 +20,12 @@ function navigateTo(page) {
     for (const el of els) {
         el.classList.add('selected')
     }
+
+    const selectedEl = document.querySelector('.main-nav .links > a.selected')
+    if (selectedEl) {
+        selectedEl.classList.remove('selected')
+    }
+    document.querySelector('.main-nav .links > a[data-navid="' + page + '"]').classList.add('selected')
 }
 
 function toggleSideNav() {
@@ -48,3 +54,10 @@ window.addEventListener('popstate', (e) => {
     path = path.slice(1, path.length).split('.')[0]
     navigateTo(path)
 })
+
+
+let path = window.location.pathname
+path = path.slice(1, path.length).split('.')[0]
+if (path != 'index') {
+    navigateTo(path || 'home')
+}
