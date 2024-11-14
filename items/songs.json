@@ -1,7 +1,7 @@
 [
     {
         "name": "Betrayal",
-        "link": "google.com",
+        "link": "https://google.com",
         "background": "url(\"assets/songs/betrayal.webp\")",
         "text-colour": "white"
     },

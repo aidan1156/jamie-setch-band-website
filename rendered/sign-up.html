@@ -21,7 +21,7 @@ body {
     font-family: albertus;
     --primary-clr: hsl(55, 94%, 54%);
     --primary-clr-transparent: hsla(55, 94%, 54%, 0.4);
-    --side-nav-width: 10em;
+    --side-nav-width: 18rem;
     --primary-grey: #2E2E2E;
     --primary-white: #FBF8F5;
 }
@@ -113,7 +113,8 @@ nav > .main-nav > .links > a {
     text-decoration: none;
     position: relative;
     padding: 0.5rem;
-    --hover-speed: 0.3s;
+    --hover-speed: 0.5s;
+    font-size: 0.9em;
 }
 
 nav > .main-nav > .links > a:hover {
@@ -128,6 +129,7 @@ nav > .main-nav > .links > a::after {
     transition: var(--hover-speed) all;
     width: 0;
     height: 0;
+    opacity: 0;
 }
 
 nav > .main-nav > .links > a::before {
@@ -149,6 +151,7 @@ nav > .main-nav > .links > a:hover::before,
 nav > .main-nav > .links > a:hover::after {
     width: 100%;
     height: 100%;
+    opacity: 1;
 }
 
 
@@ -168,7 +171,7 @@ nav[data-size="top-bar"] > .main-nav {
 
 nav > .socials > * > img {
     filter:  url(#whiteFilter);
-    height: 1.3em;
+    height: 1.5em;
 }
 
 nav > .socials > * > img:hover {
@@ -203,13 +206,15 @@ nav > .socials > * > img:hover {
     transition: 0.5s transform;
     background-color: var(--primary-grey);
     padding: 1em 0;
+    font-size: 1.3em;
 }
 
 .side-nav > a {
     display: block;
     color: inherit;
     text-decoration: none;
-    padding: 0.2em 1em;
+    padding: 0.5em 1.5em;
+    text-transform: uppercase;
 }
 
 .side-nav > a.selected {
@@ -229,6 +234,17 @@ body.side-nav-open .side-nav {
 
 body.side-nav-open .side-nav-close {
     display: block;
+}
+
+.side-nav-socials {
+    padding: 0.5em 1.5em;
+    margin-top: 0.5em;
+}
+
+.side-nav-socials > a > img {
+    height: 1.7em;
+    filter:  url(#whiteFilter);
+    margin-right: 0.3em;
 }
 #music > a {
     display: block;
@@ -290,23 +306,23 @@ body.side-nav-open .side-nav-close {
                     <img src="assets/icons/menu.svg" alt="">
                 </button>
                 
-            <a href="www.google.com">
+            <a href="https://www.google.com">
                 <img src="assets/socials/instagram.png" alt="">
             </a>
         
-            <a href="www.google.com">
+            <a href="https://www.google.com">
                 <img src="assets/socials/instagram.png" alt="">
             </a>
         
-            <a href="www.google.com">
+            <a href="https://www.google.com">
                 <img src="assets/socials/instagram.png" alt="">
             </a>
         
-            <a href="www.google.com">
+            <a href="https://www.google.com">
                 <img src="assets/socials/instagram.png" alt="">
             </a>
         
-            <a href="www.google.com">
+            <a href="https://www.google.com">
                 <img src="assets/socials/instagram.png" alt="">
             </a>
         
@@ -325,7 +341,7 @@ body.side-nav-open .side-nav-close {
         <div class=" hidden  page" data-nav="full" id="home">
 </div><div class=" hidden  page" data-nav="top-bar" id="music">
     
-        <a style='background:url("assets/songs/betrayal.webp"); color: white' href='google.com'>
+        <a style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com'>
             Betrayal
         </a>
     
@@ -390,6 +406,29 @@ body.side-nav-open .side-nav-close {
         <a href="/music" data-navid="music" class="nav-link">Music</a>
         <a href="/store" data-navid="store" class="nav-link">Store</a>
         <a href="/sign-up" data-navid="sign-up" class="nav-link">Sign Up</a>
+        <div class="side-nav-socials">
+            
+            <a href="https://www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="https://www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="https://www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="https://www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+            <a href="https://www.google.com">
+                <img src="assets/socials/instagram.png" alt="">
+            </a>
+        
+        </div>
     </div>
     
     <svg class="hidden">
