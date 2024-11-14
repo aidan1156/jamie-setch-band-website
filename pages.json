@@ -7,12 +7,12 @@
     {
         "id": "music",
         "name": "Music",
-        "show-nav": "half"
+        "show-nav": "top-bar"
     },
     {
         "id": "store",
         "name": "Store",
-        "show-nav": "half"
+        "show-nav": "top-bar"
     },
     {
         "id": "sign-up",

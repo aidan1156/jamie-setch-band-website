@@ -63,6 +63,17 @@ nav {
     position: relative;
 }
 
+nav[data-size="top-bar"] {
+    flex-direction: row;
+    height: max-content;
+    background: #2E2E2E;
+}
+
+nav[data-size="none"] {
+    display: none;
+}
+
+
 nav::before {
     position: absolute;
     inset: 0;
@@ -79,10 +90,18 @@ nav > .main-nav {
     padding: 5vw;
 }
 
+nav[data-size="top-bar"] .main-nav {
+    padding: 0.5em;
+}
+
 nav > .main-nav > h1 {
     font-size: 2em;
     margin: 0;
     padding-left: 0.5rem;
+}
+
+nav[data-size="top-bar"] > .main-nav > h1 {
+    display: none;
 }
 
 nav > .main-nav > .links > a {
@@ -137,6 +156,11 @@ nav > .socials {
     gap: 2em;
     flex: 0;
     place-items: center;
+    line-height: 1;
+}
+
+nav[data-size="top-bar"] > .socials {
+    padding: 0.5em;
 }
 
 nav > .socials > * > img {
@@ -181,6 +205,10 @@ nav > .socials > * > img:hover {
     padding: 0.2em 1em;
 }
 
+.side-nav > a.selected {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 .side-nav-close {
     display: none;
     position: fixed;
@@ -198,7 +226,7 @@ body.side-nav-open .side-nav-close {
 </head>
 <body>
     <main>
-        <nav>
+        <nav data-size="top-bar">
             <div class="socials">
                 <button class="side-nav-button" onclick="site.toggleSideNav()">
                     <img src="assets/icons/menu.svg" alt="">
@@ -211,19 +239,19 @@ body.side-nav-open .side-nav-close {
             <div class="main-nav">
                 <h1>Jamie Setch</h1>
                 <div class="links">
-                    <a href="/home" data-nav-id="home">Home</a>
-                    <a href="/music" data-nav-id="music">Music</a>
-                    <a href="/store" data-nav-id="store">Store</a>
-                    <a href="/sign-up" data-nav-id="sign-up">Sign Up</a>
+                    <a href="/home" data-navid="home" class="nav-link">Home</a>
+                    <a href="/music" data-navid="music" class="nav-link">Music</a>
+                    <a href="/store" data-navid="store" class="nav-link">Store</a>
+                    <a href="/sign-up" data-navid="sign-up" class="nav-link">Sign Up</a>
                 </div>
             </div>
         </nav>
-        <div class=" hidden " data-nav="half" id="home">
-</div><div class=" hidden " data-nav="half" id="music">
+        <div class=" hidden  page" data-nav="full" id="home">
+</div><div class=" hidden  page" data-nav="top-bar" id="music">
     music
-</div><div class="" data-nav="half" id="store">
+</div><div class="  page" data-nav="top-bar" id="store">
     store
-</div><div class=" hidden " data-nav="half" id="sign-up">
+</div><div class=" hidden   page" data-nav="none" id="sign-up">
     sign-up
 </div>
     </main>
@@ -231,10 +259,10 @@ body.side-nav-open .side-nav-close {
 
     <div class="side-nav-close" onclick="site.toggleSideNav()"></div>
     <div class="side-nav">
-        <a href="/home" data-nav-id="home">Home</a>
-        <a href="/music" data-nav-id="music">Music</a>
-        <a href="/store" data-nav-id="store">Store</a>
-        <a href="/sign-up" data-nav-id="sign-up">Sign Up</a>
+        <a href="/home" data-navid="home" class="nav-link">Home</a>
+        <a href="/music" data-navid="music" class="nav-link">Music</a>
+        <a href="/store" data-navid="store" class="nav-link">Store</a>
+        <a href="/sign-up" data-navid="sign-up" class="nav-link">Sign Up</a>
     </div>
     
     <svg class="hidden">

@@ -32,10 +32,12 @@ def build():
             content = pageContents[key].replace('{{HIDDEN}}', ' hidden ')
             if key == page['id']:
                 content = pageContents[key].replace('{{HIDDEN}}', '')
-            content = content.replace('{{SHOW_NAV}}', page['show-nav'])
+            showNav = [page['show-nav'] for page in pages if page['id'] == key]
+            content = content.replace('{{SHOW_NAV}}', showNav[0])
             contents += content
         
         contents = template.replace('{{MAIN_CONTENT}}', contents)
+        contents = contents.replace('{{NAV_SIZE}}', page['show-nav'])
 
         f = open('rendered/' + page['id'] + '.html', 'w+')
         f.write(contents)
