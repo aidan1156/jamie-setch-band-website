@@ -1,0 +1,41 @@
+
+#store {
+    color: var(--primary-grey);
+    background-color: var(--primary-white);
+    padding-bottom: 5em;
+    min-height: 100vh;
+}
+
+#store h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    margin:0;
+    font-size: 3em;
+}
+
+
+.store-items {
+    display: flex;
+    place-content: center;
+    text-align: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    max-width: 50em;
+    margin: auto;
+}
+
+.store-item {
+    color: inherit;
+    text-decoration: none;
+}
+
+.store-item > img {
+    display: block;
+    width: 10em;
+}
+
+.store-item > .item-name {
+    font-size: 1.5em;
+}

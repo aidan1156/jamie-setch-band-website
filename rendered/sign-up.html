@@ -22,6 +22,8 @@ body {
     --primary-clr: hsl(55, 94%, 54%);
     --primary-clr-transparent: hsla(55, 94%, 54%, 0.4);
     --side-nav-width: 10em;
+    --primary-grey: #2E2E2E;
+    --primary-white: #FBF8F5;
 }
 
 body.side-nav-open {
@@ -184,6 +186,9 @@ nav > .socials > * > img:hover {
     nav > .main-nav > .links {
         display: none;
     }
+    body {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -196,7 +201,7 @@ nav > .socials > * > img:hover {
     width: var(--side-nav-width);
     transform: translateX(calc(-1 * var(--side-nav-width)));
     transition: 0.5s transform;
-    background-color: #2E2E2E;
+    background-color: var(--primary-grey);
     padding: 1em 0;
 }
 
@@ -234,7 +239,48 @@ body.side-nav-open .side-nav-close {
     color: inherit;
     background-position: center center;
     text-transform: uppercase;
-}</style>
+}
+#store {
+    color: var(--primary-grey);
+    background-color: var(--primary-white);
+    padding-bottom: 5em;
+    min-height: 100vh;
+}
+
+#store h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    margin:0;
+    font-size: 3em;
+}
+
+
+.store-items {
+    display: flex;
+    place-content: center;
+    text-align: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    max-width: 50em;
+    margin: auto;
+}
+
+.store-item {
+    color: inherit;
+    text-decoration: none;
+}
+
+.store-item > img {
+    display: block;
+    width: 10em;
+}
+
+.store-item > .item-name {
+    font-size: 1.5em;
+}
+</style>
 </head>
 <body>
     <main>
@@ -291,8 +337,47 @@ body.side-nav-open .side-nav-close {
             Coming Later...
         </a>
     
-</div><div class=" hidden   page" data-nav="top-bar" id="store">
-    store
+</div><div class=" hidden  page" data-nav="top-bar" id="store">
+    <h2>Merchandise</h2>
+    <div class="store-items">
+        
+            <a class="store-item" href="https://shopify.com">
+                <img src="assets/store/placeholder.png" alt="Tote bag">
+                <div class="item-name">Tote bag</div>
+                <div class="item-price">£15.00</div>
+            </a>
+        
+            <a class="store-item" href="https://shopify.com">
+                <img src="assets/store/placeholder.png" alt="Tote bag">
+                <div class="item-name">Tote bag</div>
+                <div class="item-price">£15.00</div>
+            </a>
+        
+            <a class="store-item" href="https://shopify.com">
+                <img src="assets/store/placeholder.png" alt="Tote bag">
+                <div class="item-name">Tote bag</div>
+                <div class="item-price">£15.00</div>
+            </a>
+        
+            <a class="store-item" href="https://shopify.com">
+                <img src="assets/store/placeholder.png" alt="Tote bag">
+                <div class="item-name">Tote bag</div>
+                <div class="item-price">£15.00</div>
+            </a>
+        
+            <a class="store-item" href="https://shopify.com">
+                <img src="assets/store/placeholder.png" alt="Tote bag">
+                <div class="item-name">Tote bag</div>
+                <div class="item-price">£15.00</div>
+            </a>
+        
+            <a class="store-item" href="https://shopify.com">
+                <img src="assets/store/placeholder.png" alt="Tote bag">
+                <div class="item-name">Tote bag</div>
+                <div class="item-price">£15.00</div>
+            </a>
+        
+    </div>
 </div><div class="  page" data-nav="none" id="sign-up">
     sign-up
 </div>

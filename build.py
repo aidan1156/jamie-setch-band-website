@@ -25,6 +25,24 @@ def get_music_html():
     return result
 
 
+def get_store_html():
+    f = open('items/store.json')
+    items = json.load(f)
+    f.close()
+
+    result = ''
+    for item in items:
+        result += f'''
+            <a class="store-item" href="{item['link']}">
+                <img src="{item['image']}" alt="{item['name']}">
+                <div class="item-name">{item['name']}</div>
+                <div class="item-price">{item['price']}</div>
+            </a>
+        '''
+    
+    return result
+
+
 def build():
     f = open('pages.json')
     pages = json.load(f)
@@ -34,7 +52,7 @@ def build():
     template = f.read()
     f.close()
 
-    cssFiles = ['nav.css', 'music.css']
+    cssFiles = ['nav.css', 'music.css', 'store.css']
 
     css = ''
     for file in cssFiles:
@@ -62,8 +80,9 @@ def build():
         f = open('unrendered/' + page['id'] + '.html')
         contents = f.read()
         if page['id'] == 'music':
-
             contents = contents.replace('{{MUSIC_LIST}}', get_music_html())
+        if page['id'] == 'store':
+            contents = contents.replace('{{STORE_ITEMS}}', get_store_html())
         pageContents[page['id']] = contents
         f.close()
 

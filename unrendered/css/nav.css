@@ -16,6 +16,8 @@ body {
     --primary-clr: hsl(55, 94%, 54%);
     --primary-clr-transparent: hsla(55, 94%, 54%, 0.4);
     --side-nav-width: 10em;
+    --primary-grey: #2E2E2E;
+    --primary-white: #FBF8F5;
 }
 
 body.side-nav-open {
@@ -178,6 +180,9 @@ nav > .socials > * > img:hover {
     nav > .main-nav > .links {
         display: none;
     }
+    body {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -190,7 +195,7 @@ nav > .socials > * > img:hover {
     width: var(--side-nav-width);
     transform: translateX(calc(-1 * var(--side-nav-width)));
     transition: 0.5s transform;
-    background-color: #2E2E2E;
+    background-color: var(--primary-grey);
     padding: 1em 0;
 }
 
