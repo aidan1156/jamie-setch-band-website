@@ -180,9 +180,28 @@ nav > .socials > * > img:hover {
     display: none;
 }
 
+
+nav > .now-playing {
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    background-color: var(--primary-grey);
+    border-radius: 50vmax;
+    padding: 0.5em 1em;
+    font-size: 0.6em;
+    display: none;
+}
+
+nav[data-size="full"] > .now-playing {
+    display: block;
+}
+
 @media (max-width: 800px) {
     .side-nav-button {
         display: block;
+    }
+    nav > .main-nav {
+        margin-bottom: 1em;
     }
     nav > .main-nav > .links {
         display: none;
@@ -195,6 +214,9 @@ nav > .socials > * > img:hover {
     }
     body {
         font-size: 0.9rem;
+    }
+    nav[data-size="full"] > .now-playing {
+        left: 0.5em;
     }
 }
 

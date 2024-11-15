@@ -48,6 +48,10 @@ def build():
     pages = json.load(f)
     f.close()
 
+    f = open('items/now-playing.json')
+    nowPlaying = json.load(f)
+    f.close()
+
     f = open('unrendered/template.html')
     template = f.read()
     f.close()
@@ -60,7 +64,7 @@ def build():
         css += f.read()
         f.close()
 
-    template = template.replace('{{MAIN_CSS}}', f'<style>{css}</style>')
+    template = template.replace('{{MAIN_CSS}}', f'<style>{css}</style>').replace('{{SONG_NAME}}', nowPlaying['name']).replace('{{SONG_FILE}}', nowPlaying['src'])
 
     f = open('items/socials.json')
     socials = json.load(f)

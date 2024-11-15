@@ -61,3 +61,8 @@ path = path.slice(1, path.length).split('.')[0]
 if (path != 'index') {
     navigateTo(path || 'home')
 }
+
+document.addEventListener('click', (e) => {
+    document.querySelector('.now-playing').classList.remove('hidden')
+    document.querySelector('.now-playing audio').play()
+})

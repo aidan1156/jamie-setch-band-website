@@ -25,6 +25,10 @@
                     <a href="/sign-up" data-navid="sign-up" class="nav-link">Sign Up</a>
                 </div>
             </div>
+            <div class="now-playing hidden">
+                Now playing - {{SONG_NAME}}
+                <audio src="{{SONG_FILE}}" class="hidden"></audio>
+            </div>
         </nav>
         {{MAIN_CONTENT}}
     </main>
