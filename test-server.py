@@ -7,6 +7,8 @@ app = Flask(__name__, static_url_path = '/unrendered')
 @app.route('/<path>')
 def path(path):
     build.build()
+    if path != 'favicon.ico':
+        return send_file('rendered/' + path + '.html')
     return send_file('rendered/' + path)
 
 @app.route('/<path>/<path2>')

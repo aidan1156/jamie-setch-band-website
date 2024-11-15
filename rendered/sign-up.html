@@ -19,6 +19,7 @@ body {
     font-size: 1.3em;
     color: white;
     font-family: albertus;
+    letter-spacing: 0.2em;
     --primary-clr: hsl(55, 94%, 54%);
     --primary-clr-transparent: hsla(55, 94%, 54%, 0.4);
     --side-nav-width: 18rem;
@@ -98,8 +99,10 @@ nav[data-size="top-bar"] .main-nav {
 }
 
 nav > .main-nav > h1 {
-    font-size: 2em;
+    font: inherit;
+    font-size: 1.8em;
     margin: 0;
+    margin-bottom: 0.5em;
     padding-left: 0.5rem;
 }
 
@@ -113,7 +116,7 @@ nav > .main-nav > .links > a {
     text-decoration: none;
     position: relative;
     padding: 0.5rem;
-    font-size: 0.9em;
+    font-size: 0.8em;
     transition: var(--hover-speed) color;
     --hover-speed: 0.5s;
 }
@@ -172,7 +175,7 @@ nav[data-size="top-bar"] > .main-nav {
 
 nav > .socials > * > img {
     filter:  url(#whiteFilter);
-    height: 1.5em;
+    height: 1.3em;
 }
 
 nav > .socials > * > img:hover {
