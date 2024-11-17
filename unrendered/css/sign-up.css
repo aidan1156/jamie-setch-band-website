@@ -1,0 +1,44 @@
+
+
+#sign-up {
+    min-height: 100vh;
+    background-image: url('assets/email-cover.webp');
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-content: center;
+    text-transform: uppercase;
+}
+
+#sign-up::after {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+    z-index: -1;
+}
+
+#sign-up > div {
+    background-color: #f6f6f6;
+    color: var(--primary-grey);
+    padding-top: 20px;
+    text-align: center;
+}
+
+#sign-up > div > *:not(.ml-embedded) {
+    padding: 0 20px;
+}
+
+#sign-up > div > h2 {
+    margin: 0;
+}
+
+#sign-up > button {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    color: white;
+    text-transform: uppercase;
+}

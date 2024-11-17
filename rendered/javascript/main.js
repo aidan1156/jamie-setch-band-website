@@ -26,6 +26,9 @@ function navigateTo(page) {
         selectedEl.classList.remove('selected')
     }
     document.querySelector('.main-nav .links > a[data-navid="' + page + '"]').classList.add('selected')
+
+    sessionStorage.setItem('last-page', sessionStorage.getItem('current-page'))
+    sessionStorage.setItem('current-page', page)
 }
 
 function toggleSideNav() {
@@ -36,9 +39,19 @@ function closeSideNav() {
     document.body.classList.remove('side-nav-open')
 }
 
+function goBack() {
+    console.log(sessionStorage.getItem('last-page') || 'home')
+    navigateTo(sessionStorage.getItem('last-page') || 'home')
+}
+
 window.site = {}
 window.site.navigateTo = navigateTo
 window.site.toggleSideNav = toggleSideNav
+window.site.goBack = goBack
+
+
+sessionStorage.setItem('current-page', '')
+sessionStorage.setItem('last-page', '')
 
 
 const els = document.querySelectorAll('.nav-link')

@@ -43,7 +43,7 @@ button {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 main {
@@ -332,7 +332,50 @@ body.side-nav-open .side-nav-close {
 .store-item > .item-name {
     font-size: 1.5em;
 }
-</style>
+
+
+#sign-up {
+    min-height: 100vh;
+    background-image: url('assets/email-cover.webp');
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-content: center;
+    text-transform: uppercase;
+}
+
+#sign-up::after {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+    z-index: -1;
+}
+
+#sign-up > div {
+    background-color: #f6f6f6;
+    color: var(--primary-grey);
+    padding-top: 20px;
+    text-align: center;
+}
+
+#sign-up > div > *:not(.ml-embedded) {
+    padding: 0 20px;
+}
+
+#sign-up > div > h2 {
+    margin: 0;
+}
+
+#sign-up > button {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    color: white;
+    text-transform: uppercase;
+}</style>
 </head>
 <body>
     <main>
@@ -375,7 +418,7 @@ body.side-nav-open .side-nav-close {
             </div>
             <div class="now-playing hidden">
                 Now playing - first mp3 i could find
-                <audio src="assets/music.mp3" class="hidden"></audio>
+                <audio src="assets/music.mp3" class="hidden" volume="SONG_VOLUME"></audio>
             </div>
         </nav>
         <div class=" hidden  page" data-nav="full" id="home">
@@ -435,7 +478,15 @@ body.side-nav-open .side-nav-close {
         
     </div>
 </div><div class=" hidden   page" data-nav="none" id="sign-up">
-    sign-up
+    <div>
+        <h2>Newsletter Sign Up</h2>
+        <div>Sign up for exclusive information from Jamie Setch</div>
+        <div>This will be the official source from now on</div>
+        <div class="ml-embedded" data-form="ZiAdeP"></div>
+    </div>
+    <button onclick="site.goBack()">
+        Back
+    </button>
 </div>
     </main>
 
@@ -480,5 +531,15 @@ body.side-nav-open .side-nav-close {
         </filter>
     </svg>
     <script type="module" src="javascript/main.js"></script>
+
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1190565');
+    </script>
+    <!-- End MailerLite Universal -->
 </body>
 </html>
