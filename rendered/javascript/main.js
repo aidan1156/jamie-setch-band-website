@@ -40,7 +40,6 @@ function closeSideNav() {
 }
 
 function goBack() {
-    console.log(sessionStorage.getItem('last-page') || 'home')
     navigateTo(sessionStorage.getItem('last-page') || 'home')
 }
 
