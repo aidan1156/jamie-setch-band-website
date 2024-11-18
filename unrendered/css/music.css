@@ -17,6 +17,8 @@
     flex-shrink: 0;
     flex-grow: 1;
     position: relative;
+    display: grid;
+    place-content: center;
 }
 
 #music > a > .countdown {
