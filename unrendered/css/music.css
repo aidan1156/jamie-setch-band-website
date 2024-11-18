@@ -1,3 +1,9 @@
+#music {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 
 #music > a {
     display: block;
@@ -8,4 +14,18 @@
     color: inherit;
     background-position: center center;
     text-transform: uppercase;
+    flex-shrink: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+#music > a > .countdown {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em;
+    background-color: var(--primary-grey);
+    border-radius: 100vmax;
+    font-size: 1rem;
+    padding: 0.5em 1em;
 }

@@ -35,6 +35,10 @@
     margin: 0;
 }
 
+#sign-up > div > :not(h2) {
+    font-size: 0.8em;
+}
+
 #sign-up > button {
     position: absolute;
     top: 1em;

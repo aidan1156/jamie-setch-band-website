@@ -281,7 +281,13 @@ body.side-nav-open .side-nav-close {
     height: 1.7em;
     filter:  url(#whiteFilter);
     margin-right: 0.3em;
+}#music {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+
 #music > a {
     display: block;
     text-align: center;
@@ -291,6 +297,20 @@ body.side-nav-open .side-nav-close {
     color: inherit;
     background-position: center center;
     text-transform: uppercase;
+    flex-shrink: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+#music > a > .countdown {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em;
+    background-color: var(--primary-grey);
+    border-radius: 100vmax;
+    font-size: 1rem;
+    padding: 0.5em 1em;
 }
 #store {
     color: var(--primary-grey);
@@ -369,6 +389,10 @@ body.side-nav-open .side-nav-close {
     margin: 0;
 }
 
+#sign-up > div > :not(h2) {
+    font-size: 0.8em;
+}
+
 #sign-up > button {
     position: absolute;
     top: 1em;
@@ -424,18 +448,25 @@ body.side-nav-open .side-nav-close {
         <div class=" hidden  page" data-nav="full" id="home">
 </div><div class=" hidden  page" data-nav="top-bar" id="music">
     
-        <a style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com'>
-            Betrayal
-        </a>
-    
-        <a style='background:#2E2E2E; color: white' href=''>
-            Coming Soon...
-        </a>
-    
-        <a style='background:white; color: black' href=''>
-            Coming Later...
-        </a>
-    
+            <a style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com'>
+                Betrayal
+                
+                    <div class='countdown'>
+                        Releases in 5 days
+                    </div>
+                
+            </a>
+        
+            <a style='background:#2E2E2E; color: white' href=''>
+                Coming Soon...
+                
+            </a>
+        
+            <a style='background:white; color: black' href=''>
+                Coming Later...
+                
+            </a>
+        
 </div><div class=" page" data-nav="top-bar" id="store">
     <h2>Merchandise</h2>
     <div class="store-items">

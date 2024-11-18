@@ -3,7 +3,8 @@
         "name": "Betrayal",
         "link": "https://google.com",
         "background": "url(\"assets/songs/betrayal.webp\")",
-        "text-colour": "white"
+        "text-colour": "white",
+        "releases": "24/11/2024"
     },
     {
         "name": "Coming Soon...",

@@ -1,26 +1,50 @@
 import json
+import datetime
 
 
 def get_music_html():
-    base = '''
-        <a style='background:{{BACKGROUND}}; color: {{TEXT_COLOUR}}' href='{{HREF}}'>
-            {{SONG_NAME}}
-        </a>
-    '''
-
     f = open('items/songs.json')
     songs = json.load(f)
     f.close()
 
     result = ''
     for song in songs:
-        html = base\
-            .replace('{{BACKGROUND}}', song['background'])\
-            .replace('{{SONG_NAME}}', song['name'])\
-            .replace('{{HREF}}', song['link'])\
-            .replace('{{TEXT_COLOUR}}', song['text-colour'])
+        countdownHtml = ''
+        if 'releases' in song.keys():
+            date = datetime.datetime.strptime(song['releases'], '%d/%m/%Y')
+            now = datetime.datetime.now()
+            delta = date - now
 
-        result += html
+            if date > now:
+                days = delta.days
+                hours, remainder = divmod(delta.seconds, 3600)
+                minutes, seconds = divmod(remainder, 60)
+                months = days // 30
+
+                diff = ''
+                if months > 0:
+                    diff = f"{months} month{'s' if months > 1 else ''}"
+                elif days > 0:
+                    diff = f"{days} day{'s' if days > 1 else ''}"
+                elif hours > 0:
+                    diff = f"{hours} hour{'s' if hours > 1 else ''}"
+                elif minutes > 0:
+                    diff = f"{minutes} minute{'s' if minutes > 1 else ''}"
+                elif seconds > 0:
+                    diff = f"{seconds} second{'s' if seconds > 1 else ''}"
+
+                countdownHtml = f'''
+                    <div class='countdown'>
+                        Releases in {diff}
+                    </div>
+                '''
+
+        result +=  f'''
+            <a style='background:{song['background']}; color: {song['text-colour']}' href='{song['link']}'>
+                {song['name']}
+                {countdownHtml}
+            </a>
+        '''
     
     return result
 
