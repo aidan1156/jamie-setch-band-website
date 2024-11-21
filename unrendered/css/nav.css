@@ -115,13 +115,17 @@ nav > .main-nav > .links > a {
     --hover-speed: 0.5s;
 }
 
+
 nav > .main-nav > .links > a:hover,
-nav > .main-nav > .links > a.selected {
+nav > .main-nav > .links > a.selected,
+#sign-up > button:hover {
     color: var(--primary-clr);
 }
 
 nav > .main-nav > .links > a::before,
-nav > .main-nav > .links > a::after {
+nav > .main-nav > .links > a::after,
+#sign-up > button::before,
+#sign-up > button::after {
     content: "";
     position: absolute;
     transition: var(--hover-speed) all;
@@ -130,14 +134,16 @@ nav > .main-nav > .links > a::after {
     opacity: 0;
 }
 
-nav > .main-nav > .links > a::before {
+nav > .main-nav > .links > a::before,
+#sign-up > button::before {
     top: 0;
     left: 0;
     border-left: 1px solid var(--primary-clr-transparent);
     border-top: 1px solid var(--primary-clr-transparent);
 }
 
-nav > .main-nav > .links > a::after {
+nav > .main-nav > .links > a::after,
+#sign-up > button::after {
     bottom: 0;
     right: 0;
     border-right: 1px solid var(--primary-clr-transparent);
@@ -146,7 +152,9 @@ nav > .main-nav > .links > a::after {
 
 
 nav > .main-nav > .links > a:hover::before,
-nav > .main-nav > .links > a:hover::after {
+nav > .main-nav > .links > a:hover::after,
+#sign-up > button:hover::before,
+#sign-up > button:hover::after {
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -168,12 +176,12 @@ nav[data-size="top-bar"] > .main-nav {
 }
 
 nav > .socials > * > img {
-    filter:  url(#whiteFilter);
+    filter: url("/assets/filters.svg#whiteFilter");
     height: 1.3em;
 }
 
 nav > .socials > * > img:hover {
-    filter:  url(#yellowFilter);
+    filter: url("/assets/filters.svg#yellowFilter");
 }
 
 .side-nav-button {

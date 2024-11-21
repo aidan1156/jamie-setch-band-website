@@ -121,13 +121,17 @@ nav > .main-nav > .links > a {
     --hover-speed: 0.5s;
 }
 
+
 nav > .main-nav > .links > a:hover,
-nav > .main-nav > .links > a.selected {
+nav > .main-nav > .links > a.selected,
+#sign-up > button:hover {
     color: var(--primary-clr);
 }
 
 nav > .main-nav > .links > a::before,
-nav > .main-nav > .links > a::after {
+nav > .main-nav > .links > a::after,
+#sign-up > button::before,
+#sign-up > button::after {
     content: "";
     position: absolute;
     transition: var(--hover-speed) all;
@@ -136,14 +140,16 @@ nav > .main-nav > .links > a::after {
     opacity: 0;
 }
 
-nav > .main-nav > .links > a::before {
+nav > .main-nav > .links > a::before,
+#sign-up > button::before {
     top: 0;
     left: 0;
     border-left: 1px solid var(--primary-clr-transparent);
     border-top: 1px solid var(--primary-clr-transparent);
 }
 
-nav > .main-nav > .links > a::after {
+nav > .main-nav > .links > a::after,
+#sign-up > button::after {
     bottom: 0;
     right: 0;
     border-right: 1px solid var(--primary-clr-transparent);
@@ -152,7 +158,9 @@ nav > .main-nav > .links > a::after {
 
 
 nav > .main-nav > .links > a:hover::before,
-nav > .main-nav > .links > a:hover::after {
+nav > .main-nav > .links > a:hover::after,
+#sign-up > button:hover::before,
+#sign-up > button:hover::after {
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -174,12 +182,12 @@ nav[data-size="top-bar"] > .main-nav {
 }
 
 nav > .socials > * > img {
-    filter:  url(#whiteFilter);
+    filter: url("/assets/filters.svg#whiteFilter");
     height: 1.3em;
 }
 
 nav > .socials > * > img:hover {
-    filter:  url(#yellowFilter);
+    filter: url("/assets/filters.svg#yellowFilter");
 }
 
 .side-nav-button {
@@ -303,17 +311,6 @@ body.side-nav-open .side-nav-close {
     display: grid;
     place-content: center;
 }
-
-#music > a > .countdown {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 1em;
-    background-color: var(--primary-grey);
-    border-radius: 100vmax;
-    font-size: 1rem;
-    padding: 0.5em 1em;
-}
 #store {
     color: var(--primary-grey);
     background-color: var(--primary-white);
@@ -401,6 +398,8 @@ body.side-nav-open .side-nav-close {
     left: 1em;
     color: white;
     text-transform: uppercase;
+    --hover-speed: 0.5s;
+    padding: 0.3em 0.6em;
 }</style>
 </head>
 <body>
@@ -450,23 +449,16 @@ body.side-nav-open .side-nav-close {
         <div class=" hidden  page" data-nav="full" id="home">
 </div><div class=" page" data-nav="top-bar" id="music">
     
-            <a style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com'>
-                Betrayal
-                
-                    <div class='countdown'>
-                        Releases in 5 days
-                    </div>
-                
+            <a style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com' data-date='1732233600.0' class='countdown'>
+                <span>Betrayal</span>
             </a>
         
-            <a style='background:#2E2E2E; color: white' href=''>
-                Coming Soon...
-                
+            <a style='background:#2E2E2E; color: white' href='' data-date='' class=''>
+                <span>Coming Soon...</span>
             </a>
         
-            <a style='background:white; color: black' href=''>
-                Coming Later...
-                
+            <a style='background:white; color: black' href='' data-date='' class=''>
+                <span>Coming Later...</span>
             </a>
         
 </div><div class=" hidden  page" data-nav="top-bar" id="store">
@@ -555,14 +547,6 @@ body.side-nav-open .side-nav-close {
         </div>
     </div>
     
-    <svg class="hidden">
-        <filter id="whiteFilter" color-interpolation-filters="sRGB">
-            <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/>
-        </filter>
-        <filter id="yellowFilter" color-interpolation-filters="sRGB">
-            <feColorMatrix type="matrix" values="0 0 0 0 0.98  0 0 0 0 0.90  0 0 0 0 0.11  0 0 0 1 0"/>
-        </filter>
-    </svg>
     <script type="module" src="javascript/main.js"></script>
 
     <!-- MailerLite Universal -->

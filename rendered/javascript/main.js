@@ -78,3 +78,22 @@ document.addEventListener('click', (e) => {
     document.querySelector('.now-playing').classList.remove('hidden')
     document.querySelector('.now-playing audio').play()
 })
+
+
+
+setInterval(() => {
+    const els = document.querySelectorAll('.countdown')
+    for (let el of els) {
+        let seconds = parseInt(parseInt(el.dataset.date) - (Date.now() / 1000))
+        let minutes = parseInt(seconds / 60)
+        seconds = seconds % 60
+
+        let hours = parseInt(minutes / 60)
+        minutes = minutes % 60
+
+        let days = parseInt(hours / 24)
+        hours = hours % 24
+
+        el.innerHTML = `${(days + '').padStart(2, '0')}:${(hours + '').padStart(2, '0')}:${(minutes + '').padStart(2, '0')}:${(seconds + '').padStart(2, '0')}`
+    }
+}, 1000)

@@ -20,14 +20,3 @@
     display: grid;
     place-content: center;
 }
-
-#music > a > .countdown {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 1em;
-    background-color: var(--primary-grey);
-    border-radius: 100vmax;
-    font-size: 1rem;
-    padding: 0.5em 1em;
-}

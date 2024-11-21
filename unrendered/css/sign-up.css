@@ -45,4 +45,6 @@
     left: 1em;
     color: white;
     text-transform: uppercase;
+    --hover-speed: 0.5s;
+    padding: 0.3em 0.6em;
 }

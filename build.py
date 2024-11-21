@@ -9,40 +9,13 @@ def get_music_html():
 
     result = ''
     for song in songs:
-        countdownHtml = ''
+        date = ''
         if 'releases' in song.keys():
-            date = datetime.datetime.strptime(song['releases'], '%d/%m/%Y')
-            now = datetime.datetime.now()
-            delta = date - now
-
-            if date > now:
-                days = delta.days
-                hours, remainder = divmod(delta.seconds, 3600)
-                minutes, seconds = divmod(remainder, 60)
-                months = days // 30
-
-                diff = ''
-                if months > 0:
-                    diff = f"{months} month{'s' if months > 1 else ''}"
-                elif days > 0:
-                    diff = f"{days} day{'s' if days > 1 else ''}"
-                elif hours > 0:
-                    diff = f"{hours} hour{'s' if hours > 1 else ''}"
-                elif minutes > 0:
-                    diff = f"{minutes} minute{'s' if minutes > 1 else ''}"
-                elif seconds > 0:
-                    diff = f"{seconds} second{'s' if seconds > 1 else ''}"
-
-                countdownHtml = f'''
-                    <div class='countdown'>
-                        Releases in {diff}
-                    </div>
-                '''
+            date = str(datetime.datetime.strptime(song['releases'], '%d/%m/%Y').timestamp())
 
         result +=  f'''
-            <a style='background:{song['background']}; color: {song['text-colour']}' href='{song['link']}'>
-                {song['name']}
-                {countdownHtml}
+            <a style='background:{song['background']}; color: {song['text-colour']}' href='{song['link']}' data-date='{date}' class='{'countdown' if date != '' else ''}'>
+                <span>{song['name']}</span>
             </a>
         '''
     
