@@ -176,7 +176,7 @@ nav[data-size="top-bar"] > .main-nav {
 }
 
 nav > .socials > * > img {
-    filter: url("/assets/filters.svg#whiteFilter");
+    filter: brightness(0) invert(1);
     height: 1.3em;
 }
 
