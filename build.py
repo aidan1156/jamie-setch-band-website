@@ -70,7 +70,18 @@ def build():
     for social in socials:
         social_html += f'''
             <a href="{social['link']}">
-                <img src="{social['icon']}" alt="">
+
+                <svg width="200" height="200">
+                    <defs>
+                        <filter id="whiteFilter" color-interpolation-filters="sRGB">
+                            <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/>
+                        </filter>
+                        <filter id="yellowFilter" color-interpolation-filters="sRGB">
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.98  0 0 0 0 0.90  0 0 0 0 0.11  0 0 0 1 0"/>
+                        </filter>
+                    </defs>
+                    <image href="{social['icon']}" x="0" y="0" height="200px" width="200px"/>
+                </svg>
             </a>
         '''
     template = template.replace('{{SOCIALS}}', social_html)

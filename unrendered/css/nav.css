@@ -175,13 +175,19 @@ nav[data-size="top-bar"] > .main-nav {
     place-self: center;
 }
 
-nav > .socials > * > img {
-    filter: brightness(0) invert(1);
+nav > .socials svg {
     height: 1.3em;
+    width: 1.3em;
 }
 
-nav > .socials > * > img:hover {
-    filter: url("/assets/filters.svg#yellowFilter");
+nav > .socials image {
+    height: 1.3em;
+    width: 1.3em;
+    filter: url("#whiteFilter");
+}
+
+nav > .socials image:hover {
+    filter: url("#yellowFilter");
 }
 
 .side-nav-button {
