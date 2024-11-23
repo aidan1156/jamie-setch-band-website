@@ -175,19 +175,26 @@ nav[data-size="top-bar"] > .main-nav {
     place-self: center;
 }
 
-nav > .socials svg {
+nav > .socials svg,
+.side-nav-socials svg {
     height: 1.3em;
     width: 1.3em;
 }
 
-nav > .socials image {
+nav > .socials image,
+.side-nav-socials image {
     height: 1.3em;
     width: 1.3em;
     filter: url("#whiteFilter");
 }
 
-nav > .socials image:hover {
+nav > .socials image:hover,
+.side-nav-socials image:hover {
     filter: url("#yellowFilter");
+}
+
+nav > .socials button {
+    filter: brightness(0) invert(1);
 }
 
 .side-nav-button {
@@ -285,8 +292,6 @@ body.side-nav-open .side-nav-close {
     text-decoration: none;
 }
 
-.side-nav-socials > a > img {
-    height: 1.7em;
-    filter:  url(#whiteFilter);
+.side-nav-socials > a {
     margin-right: 0.3em;
 }
