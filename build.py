@@ -14,7 +14,7 @@ def get_music_html():
             date = str(datetime.datetime.strptime(song['releases'], '%d/%m/%Y').timestamp())
 
         result +=  f'''
-            <a style='background:{song['background']}; color: {song['text-colour']}' href='{song['link']}' data-date='{date}' class='{'countdown' if date != '' else ''}'>
+            <a data-name="{song['name']}" style='background:{song['background']}; color: {song['text-colour']}' href='{song['link']}' data-date='{date}' class='{'countdown' if date != '' else ''}'>
                 <span>{song['name']}</span>
             </a>
         '''

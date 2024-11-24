@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamie Setch</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
 @font-face { 
     font-family: albertus; 
@@ -181,19 +182,26 @@ nav[data-size="top-bar"] > .main-nav {
     place-self: center;
 }
 
-nav > .socials svg {
+nav > .socials svg,
+.side-nav-socials svg {
     height: 1.3em;
     width: 1.3em;
 }
 
-nav > .socials image {
+nav > .socials image,
+.side-nav-socials image {
     height: 1.3em;
     width: 1.3em;
     filter: url("#whiteFilter");
 }
 
-nav > .socials image:hover {
+nav > .socials image:hover,
+.side-nav-socials image:hover {
     filter: url("#yellowFilter");
+}
+
+nav > .socials button {
+    filter: brightness(0) invert(1);
 }
 
 .side-nav-button {
@@ -291,9 +299,7 @@ body.side-nav-open .side-nav-close {
     text-decoration: none;
 }
 
-.side-nav-socials > a > img {
-    height: 1.7em;
-    filter:  url(#whiteFilter);
+.side-nav-socials > a {
     margin-right: 0.3em;
 }#music {
     min-height: 100vh;
@@ -510,15 +516,15 @@ body.side-nav-open .side-nav-close {
         <div class=" hidden  page" data-nav="full" id="home">
 </div><div class=" page" data-nav="top-bar" id="music">
     
-            <a style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com' data-date='1732924800.0' class='countdown'>
+            <a data-name="Betrayal" style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com' data-date='1732060800.0' class='countdown'>
                 <span>Betrayal</span>
             </a>
         
-            <a style='background:#2E2E2E; color: white' href='' data-date='' class=''>
+            <a data-name="Coming Soon..." style='background:#2E2E2E; color: white' href='' data-date='' class=''>
                 <span>Coming Soon...</span>
             </a>
         
-            <a style='background:white; color: black' href='' data-date='' class=''>
+            <a data-name="Coming Later..." style='background:white; color: black' href='' data-date='' class=''>
                 <span>Coming Later...</span>
             </a>
         

@@ -85,6 +85,10 @@ setInterval(() => {
     const els = document.querySelectorAll('.countdown')
     for (let el of els) {
         let seconds = parseInt(parseInt(el.dataset.date) - (Date.now() / 1000))
+        if (seconds < 0) {
+            el.innerHTML = el.dataset.name
+            continue
+        }
         let minutes = parseInt(seconds / 60)
         seconds = seconds % 60
 
