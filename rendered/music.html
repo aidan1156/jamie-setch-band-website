@@ -218,10 +218,13 @@ nav > .now-playing {
     padding: 0.5em 1em;
     font-size: 0.6em;
     display: none;
+    align-items: center;
+    line-height: 1;
+    gap: 0.5em
 }
 
 nav[data-size="full"] > .now-playing {
-    display: block;
+    display: flex;
 }
 
 @media (max-width: 800px) {
@@ -509,14 +512,17 @@ body.side-nav-open .side-nav-close {
                 </div>
             </div>
             <div class="now-playing hidden">
-                Now playing - first mp3 i could find
+                <button onclick="site.toggleMusic()">
+                    <img src="/assets/icons/play.svg" alt="">
+                </button>
+                <span>Now playing - first mp3 i could find</span>
                 <audio src="assets/music.mp3" class="hidden" volume="SONG_VOLUME"></audio>
             </div>
         </nav>
         <div class=" hidden  page" data-nav="full" id="home">
 </div><div class=" page" data-nav="top-bar" id="music">
     
-            <a data-name="Betrayal" style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com' data-date='1732060800.0' class='countdown'>
+            <a data-name="Betrayal" style='background:url("assets/songs/betrayal.webp"); color: white' href='https://google.com' data-date='1733011200.0' class='countdown'>
                 <span>Betrayal</span>
             </a>
         

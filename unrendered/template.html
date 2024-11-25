@@ -27,7 +27,10 @@
                 </div>
             </div>
             <div class="now-playing hidden">
-                Now playing - {{SONG_NAME}}
+                <button onclick="site.toggleMusic()">
+                    <img src="/assets/icons/play.svg" alt="">
+                </button>
+                <span>Now playing - {{SONG_NAME}}</span>
                 <audio src="{{SONG_FILE}}" class="hidden" volume="SONG_VOLUME"></audio>
             </div>
         </nav>

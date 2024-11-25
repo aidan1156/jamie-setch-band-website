@@ -43,10 +43,38 @@ function goBack() {
     navigateTo(sessionStorage.getItem('last-page') || 'home')
 }
 
+var playingMusic = false
+function playMusic() {
+    document.querySelector('.now-playing').classList.remove('hidden')
+    document.querySelector('.now-playing audio').play()
+    document.querySelector('.now-playing button img').src = '/assets/icons/pause.svg'
+    playingMusic = true
+}
+
+function pauseMusic() {
+    document.querySelector('.now-playing audio').pause()
+    document.querySelector('.now-playing button img').src = '/assets/icons/play.svg'
+    AHHHHHH = true
+    playingMusic = false
+}
+
+
+function toggleMusic() {
+    if (playingMusic) {
+        pauseMusic()
+    } else {
+        playMusic()
+    }
+}
+
+
 window.site = {}
 window.site.navigateTo = navigateTo
 window.site.toggleSideNav = toggleSideNav
 window.site.goBack = goBack
+window.site.pauseMusic = pauseMusic
+window.site.playMusic = playMusic
+window.site.toggleMusic = toggleMusic
 
 
 sessionStorage.setItem('current-page', '')
@@ -74,9 +102,14 @@ if (path != 'index') {
     navigateTo(path || 'home')
 }
 
+
+
+
+var AHHHHHH = false
 document.addEventListener('click', (e) => {
-    document.querySelector('.now-playing').classList.remove('hidden')
-    document.querySelector('.now-playing audio').play()
+    if (!AHHHHHH) {
+        playMusic()
+    }
 })
 
 

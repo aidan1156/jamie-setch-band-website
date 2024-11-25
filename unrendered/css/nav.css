@@ -211,10 +211,13 @@ nav > .now-playing {
     padding: 0.5em 1em;
     font-size: 0.6em;
     display: none;
+    align-items: center;
+    line-height: 1;
+    gap: 0.5em
 }
 
 nav[data-size="full"] > .now-playing {
-    display: block;
+    display: flex;
 }
 
 @media (max-width: 800px) {
