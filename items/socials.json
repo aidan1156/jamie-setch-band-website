@@ -1,22 +1,22 @@
 [
     {
-        "icon": "assets/socials/Apple.png",
+        "icon": "assets/socials/apple.png",
         "link": "https://www.apple.com"
     },
     {
-        "icon": "assets/socials/instagram.png",
-        "link": "https://www.google.com"
+        "icon": "assets/socials/spotify.png",
+        "link": "https://www.spotify.com"
+    },
+    {
+        "icon": "assets/socials/youtube.png",
+        "link": "https://www.youtube.com"
     },
     {
         "icon": "assets/socials/instagram.png",
-        "link": "https://www.google.com"
+        "link": "https://www.instagram.com/jamiesetch"
     },
     {
-        "icon": "assets/socials/instagram.png",
-        "link": "https://www.google.com"
-    },
-    {
-        "icon": "assets/socials/instagram.png",
-        "link": "https://www.google.com"
+        "icon": "assets/socials/tiktok.png",
+        "link": "https://www.tiktok.com/jamie.setch.music"
     }
 ]
