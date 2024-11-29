@@ -1,6 +1,12 @@
 [
     {
-        "name": "Tote bag",
+        "name": "T-Shirt White",
+        "image": "assets/store/placeholder.png",
+        "price": "£15.00",
+        "link": "https://shopify.com"
+    },
+    {
+        "name": "T-Shirt Black",
         "image": "assets/store/placeholder.png",
         "price": "£15.00",
         "link": "https://shopify.com"
@@ -12,13 +18,7 @@
         "link": "https://shopify.com"
     },
     {
-        "name": "Tote bag",
-        "image": "assets/store/placeholder.png",
-        "price": "£15.00",
-        "link": "https://shopify.com"
-    },
-    {
-        "name": "Tote bag",
+        "name": "White Mug",
         "image": "assets/store/placeholder.png",
         "price": "£15.00",
         "link": "https://shopify.com"
