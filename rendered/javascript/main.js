@@ -67,6 +67,8 @@ function toggleMusic() {
     }
 }
 
+document.querySelector('.now-playing audio').volume = 0.1
+
 
 window.site = {}
 window.site.navigateTo = navigateTo
