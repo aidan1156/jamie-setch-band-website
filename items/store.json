@@ -1,14 +1,14 @@
 [
     {
-        "name": "White T",
+        "name": "Embossed T (White)",
         "image": "assets/store/White-T.png",
-        "price": "£25.00",
+        "price": "£24.99",
         "link": "https://shopify.com"
     },
     {
         "name": "T-Shirt Black",
         "image": "assets/store/placeholder.png",
-        "price": "£15.00",
+        "price": "£24.99",
         "link": "https://shopify.com"
     },
     {
@@ -23,16 +23,4 @@
         "price": "£15.00",
         "link": "https://shopify.com"
     },
-    {
-        "name": "Tote bag",
-        "image": "assets/store/placeholder.png",
-        "price": "£15.00",
-        "link": "https://shopify.com"
-    },
-    {
-        "name": "Tote bag",
-        "image": "assets/store/placeholder.png",
-        "price": "£15.00",
-        "link": "https://shopify.com"
-    }
 ]
