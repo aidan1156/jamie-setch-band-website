@@ -1,12 +1,12 @@
 [
     {
-        "name": "Embossed T (White)",
+        "name": "White T-Shirt",
         "image": "assets/store/White-T.png",
         "price": "£24.99",
         "link": "https://shopify.com"
     },
     {
-        "name": "T-Shirt Black",
+        "name": "Black T-Shirt",
         "image": "assets/store/placeholder.png",
         "price": "£24.99",
         "link": "https://shopify.com"
