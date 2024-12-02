@@ -7,13 +7,13 @@
     },
     {
         "name": "Tote bag",
-        "image": "assets/store/placeholder.png",
+        "image": "assets/store/Tote.png",
         "price": "£14.99",
         "link": "https://shopify.com"
     },
     {
         "name": "White Mug",
-        "image": "assets/store/placeholder.png",
+        "image": "assets/store/Mug.png",
         "price": "£12.00",
         "link": "https://shopify.com"
     }
